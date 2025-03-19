@@ -65,14 +65,14 @@ header .nav_bar ul {
     display: flex;
 }
 
-p{
+/*p{
     position: fixed;
     font-size: larger;
     font-weight: 100px;
     left: 42%;
     top: 15%;
     font-size: 50px;
-}
+}*/
 
 .contenu{
     flex: 1 0 auto;
@@ -102,7 +102,7 @@ img{
 }
 
 h1{
-      font-family: "Dancing Script", cursive;
+    font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 10px;
     font-style: normal; 
@@ -115,13 +115,51 @@ h1{
     gap: 20px;
 }
 
+
 .produits{
-    
-        display: grid;            
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-gap: 16px;         
-        padding: 16px;
+    display: flex;
+    animation: scroll 50s linear infinite; /* Animation pour faire défiler les images */
+    animation-iteration-count: infinite;
+
 }
-.produits img{
-    width: 100%;
+
+.produits img {
+    width: 450px;
+    height: 250px;
+    object-fit: contain;
+    box-shadow: none;
+    margin-right: 10px;
+}
+
+.produits img:hover{
+    border: 5px solid white;
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(25%);
+        
+    }
+    100% {
+        transform: translateX(-100%);
+        
+    }
+}
+
+
+
+.contenu{
+    background-image: linear-gradient(rgb(246, 246, 71), rgb(253, 253, 5), rgba(50, 248, 28, 0.426));
+}
+
+header #Motdebienvenue{
+    width: 125px;
+    height: 50px;
+    border: 5px solid green;
+    border-radius: 25px;
+    background-color:  rgb(111, 180, 7);
 }

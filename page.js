@@ -1,12 +1,12 @@
-/*let header = document.querySelector('header')
-
-header.addEventListener("mouseover", ()=>{
+let header = document.querySelector('header')
+let score =0;
+header.addEventListener("click", ()=>{
     let nom = prompt("Entrez votre nom !!😎") 
-    let score = 1;
+    score =1;
 
-    if(score){
-        let BIENVENUE = document.querySelector('BIENVENUE')
+    if(score = 1){
+        let BIENVENUE = document.querySelector('span')
 
-        BIENVENUE.classList.add(`${nom}`);
+        BIENVENUE.textContent = nom;
     }
-})*/
+})
