@@ -1,12 +1,10 @@
-let header = document.querySelector('header')
+let BIENVENUE = document.querySelector('span')
 let score =0;
-header.addEventListener("click", ()=>{
+BIENVENUE.addEventListener("click", ()=>{
     let nom = prompt("Entrez votre nom !!😎") 
     score =1;
 
     if(score = 1){
-        let BIENVENUE = document.querySelector('span')
-
         BIENVENUE.textContent = nom;
     }
 })
